@@ -69,7 +69,7 @@ export class MoviesDashboardComponent implements OnInit, OnDestroy {
   }
 
   fetchMoviesWithSearchKey(key: string) {
-    this.http.get('http://api.tvmaze.com/search/shows', {
+    this.http.get('https://api.tvmaze.com/search/shows', {
       params: {
         q: key
       },
