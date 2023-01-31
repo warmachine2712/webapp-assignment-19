@@ -1,0 +1,9 @@
+*{
+  margin: 5px;
+}
+.main div {
+  border: 2px solid red;
+  margin: 10px 20px;
+  width: 100px;
+  
+}

@@ -1,0 +1,15 @@
+<input
+  type="text"
+  (keyup)="getMoviesWithInput($event)"
+  placeholder=" Search Movies Here "
+  style="float: right; width: 200px"
+/>
+<div class="scroller">
+  <div *ngFor="let genere of moviesCollection" class="main">
+    <h2>{{ genere.genereName }}</h2>
+    <hr />
+    <ng-container *ngFor="let movie of genere.speceficGenereCollection">
+      <app-movie-card [movie]="movie"></app-movie-card>
+    </ng-container>
+  </div>
+</div>

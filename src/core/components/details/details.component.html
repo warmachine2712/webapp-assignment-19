@@ -1,0 +1,23 @@
+<div class="row show-movie">
+  <img src="{{ movieDetails.image.medium }}" class="col-3" />
+  <div class="col-6">
+    <div class="row">
+      <h2>{{ movieDetails.name }} ({{ movieDetails.rating.average }})</h2>
+    </div>
+    <div class="row">
+      <p>{{ movieDetails.premiered }} | {{ movieDetails.runtime }}</p>
+    </div>
+    <div class="row">
+      <h5 class="col-1">Gener:</h5>
+      <div class="col-1" *ngFor="let item of movieDetails.genres">
+        {{ item }}
+      </div>
+    </div>
+    <div class="row">
+      <p>Movie Description: {{ movieDetails.summary }}</p>
+    </div>
+  </div>
+  <div #rating class="col-2">
+    <i class="fa fa-star-o" aria-hidden="true" style="color: gold"></i>
+  </div>
+</div>
